@@ -1,0 +1,45 @@
+/*$pred = $conn->query("select marks,max_mark,date
+					from stud_marks
+					where reg_no = '$regno'
+					and sub_code='$sub'
+					order by date");
+		$x1 = 0;$x2 = 0;
+		$y1 = 0; $y2 =0;
+		$count = 0; $mtot = 0;
+		
+		while ($row1 = mysqli_fetch_array($pred)){
+
+			$x1 = $x2;			
+			$x2 = $row1[0]/$row1[1]*100;
+
+			$x = $x2-$x1;
+			
+			$y1 = $y2;
+			$y2 = $row1[2];
+
+			$y = $y2-$y1;
+
+			$m = $x/$y;
+
+			$mtot += $m;
+			$count++;
+
+		}
+		$m = $mtot;
+
+		if($count !=0){
+			
+			$m = $mtot/$count;
+			$pred = $conn->query("select marks,max_mark,date
+					from stud_marks
+					where reg_no = '$regno'
+					and sub_code='$sub'
+					order by date
+					limit 1");
+	
+			while ($row1 = mysqli_fetch_array($pred)){
+
+				$c = $row1[0]/$row1[1]*100;
+			}
+			$y = $m*5 +$c;
+		}*/
